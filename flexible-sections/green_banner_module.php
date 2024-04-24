@@ -31,7 +31,7 @@ if ( ! empty( $banner_image ) || ! empty( $title ) || ! empty( $subtitle ) || ! 
                             </div>
                         <?php } if ( ! empty( $cta ) ) { ?>
                             <div class="green-btn hero-btn">
-                                <a href="#video-popup-section" onclick="fathom.trackEvent('video-popup-section-button click');"><?php echo $cta; ?></a>
+                                <a href="https://homes.wesselrealestate.com/idx/homevaluation" onclick="fathom.trackEvent('video-popup-section-button click');"><?php echo $cta; ?></a>
                             </div>
                         <?php } ?>
                     </div>

@@ -4,7 +4,7 @@
  * Description:      Mai Achieve child theme for the Genesis Framework.
  * Author:           BizBudding
  * Author URI:       https://bizbudding.com/
- * Version:          2.1.1
+ * Version: 2.1.2
  * Text Domain:      mai-achieve
  * Template:         genesis
  * Template Version: 3.3.5
@@ -430,6 +430,20 @@ input[name="post_password"] {
 
 
 
+/* # Styling changes for TKTK 4328
+*  Cap Web Solutions - Front page changes. 
+* ---------------------------------------------------------- */
+
+p>em>a {
+	color: black;
+	text-decoration: line;
+}
+
+.image-content .inner .right .image img {
+	display: block;
+	box-shadow: 0 19px 68px rgba(161, 160, 169, 0.28);
+	object-fit: cover;
+}
 /* # Media Queries (mobile-first)
 ---------------------------------------------------------------------------------------------------- */
 
