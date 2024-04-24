@@ -18,7 +18,7 @@ if ( ! empty( $image ) || ! empty( $title ) || ! empty( $description ) || ! empt
             <?php } ?>
             <div class="inner flex">
                 <?php if ( ! empty( $image ) ) { ?>
-                    <div class="left">
+                    <div class="right">
                         <div class="image">
                             <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
                             <!-- <div class="over-text">Don wessel - Exclusive Buyer's Agent</div> -->
