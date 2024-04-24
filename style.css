@@ -1,0 +1,489 @@
+/**
+ * Theme Name:       Mai Achieve
+ * Theme URI:        https://bizbudding.com/mai-theme/
+ * Description:      Mai Achieve child theme for the Genesis Framework.
+ * Author:           BizBudding
+ * Author URI:       https://bizbudding.com/
+ * Version:          2.1.1
+ * Text Domain:      mai-achieve
+ * Template:         genesis
+ * Template Version: 3.3.5
+ * License:          GPL-2.0-or-later
+ * License URI:      http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+ 
+/* # Defaults pulled in from Mai Law Pro v1.0 theme
+---------------------------------------------------------------------------------------------------- */
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+
+h1,
+.banner-title,
+.heading,
+.widget-title,
+.widgettitle {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+}
+
+.heading {
+	text-align: inherit;
+}
+
+.genesis-nav-menu a {
+	font-weight: normal;
+}
+
+.idx-wrapper-template-default .widget_social_icons {
+	display: none;
+}
+
+/* Pull everything out of Additional CSS in Customizer and dump in here. 
+---------------------------------------------------------------------------------------------------- */
+
+/* Match Achieve header-before to Mai Law Pro v1 */
+#modal-1-content > ul > li > a > span {
+    color: #067CCC;
+    text-decoration: none;
+}
+
+#modal-1-content li:nth-child(2):before {
+	content: "|"; 
+	position: relative;
+	right: 2px;
+}
+
+.before-header {
+ padding: 16px;	
+ border-bottom: 1px solid   rgba(0,0,0,0.05);
+ font-size: 1rem;
+}
+#page-header > div > div > h1 {
+	color: #ffffff;
+}
+
+/* End of header before matching */ 
+
+/* Match Property Search sidebar form styles */
+#idx_omnibar_widget-2 {
+	padding: 26px;
+}
+/* END of Match Property Search sidebar form styles */
+
+/* Match sidebar nav menus */ 
+
+.widget ol,
+.widget ul,
+.site-footer ul {
+    margin: 0 0 24px 20px;
+}
+.widget-wrap #menu-browse-greenville-real-estate > li,
+.widget-wrap #menu-popular-articles > li {
+	list-style-type: disc;
+	display: list-item;
+}
+
+#nav_menu-5,
+#nav_menu-7,
+#impress_lead_signup-2 {
+	background-color: #fff;
+	padding: 26px;
+}
+/* END OF Match sidebar nav menus */ 
+
+/* Footer Styles from v1 */ 
+.site-footer a {
+	text-decoration: none;
+}
+span#footer-credits {
+	font-size: small;
+}
+/* END OF Footer Styles from v1 */ 
+
+/* Add BG image to Mai Col */
+.bg-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+#genesis-content .mai-col-bg-image {
+	background-image: url("https://wesselrealestate.com/wp-content/uploads/2014/11/Downtown-Greenville-SC-002-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding: 60px 50px;
+}
+#genesis-content > article > div > div > div.wp-container-11.wp-block-group > div > div > div > div.mai-column.is-column.mai-col-bg-image {
+	background-color: rgba(0,0,0,.9);
+	z-index:2;
+}
+/* END OF  Add BG image to Mai Col */
+.sidebar .widget.IDX_Omnibar_Widget {
+	background-color:#003366;
+	color:#fff;
+}
+
+.sidebar .IDX_Omnibar_Widget .widget-title {
+	color:#fff;
+}
+
+.sidebar .idx-omnibar-form button {
+	background-color: #fff;
+	color:#003366;
+}
+
+.header-before .menu-item a, .header-before .nav-search,
+.home .nav-header .current-menu-item > a, .nav-header .nav-search, .nav-header a {color:#003366;}
+
+.header-before .genesis-nav-menu .menu-item .fa {
+	font-size: 1rem;
+}
+
+.section .button,
+.section button,
+.section input[type="button"],
+.section input[type="submit"],
+.section .idx-omnibar-form button {
+	background-color:#fff;
+	color:#117bb8;
+}
+
+.section .button:hover,
+.section button:hover,
+.section input[type="button"]:hover,
+.section input[type="submit"]:hover,
+.section .idx-omnibar-form button:hover {
+	background-color:#fff;
+	color:#117bb8;
+}
+
+
+.gallery-caption,
+.wp-caption-text{
+	position: absolute;
+	bottom: 0;
+	font-size: 1.25rem;
+	text-align: center;
+	font-weight: 400;
+	width: 100%;
+	padding: 10px 5px;
+	font-family: 'Poppins',sans-serif;
+	font-weight: 400;
+	color:#fff;
+	line-height:1;
+	z-index: 20;
+}
+
+figure.wp-caption {
+position: relative;
+}
+
+figure.wp-caption img {
+	display:block;
+}
+
+figure.wp-caption a:after {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: block;
+-webkit-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+	background-image: linear-gradient(to bottom,rgba(0,0,0,0) 25%,
+    rgba(0,0,0,.6));
+}
+
+figure:hover.wp-caption a:after {
+background-image: linear-gradient(to top,rgba(0,0,0,0) 25%,
+    rgba(0,0,0,.6));
+}
+
+.section div.gform_wrapper .gfield_required {color:#fff;}
+
+.section div.gform_wrapper div.validation_error {
+	background: rgba(255,223,224,.25);
+}
+
+p:empty {display:block;}
+
+
+
+/* 03/23/2022 - Cap Web Solutions - Improve visiblity of testimonial blockquotes */
+
+blockquote > p,
+blockquote:before {
+	color: rgba(0,0,0);
+}
+
+@media only screen and (min-width: 769px) {
+
+	.alignwide {
+		margin-left: calc(25% - 25vw);
+		margin-right: calc(25% - 25vw);
+		width: auto;
+		max-width: 1000%;
+	}
+
+	.alignwide img,
+	.alignfull img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		float: left;
+		margin-left: 2.564102564102564%;
+	}
+
+	.one-half,
+	.three-sixths,
+	.two-fourths {
+		width: 48.717948717948715%;
+	}
+
+	.one-third,
+	.two-sixths {
+		width: 31.623931623931625%;
+	}
+
+	.four-sixths,
+	.two-thirds {
+		width: 65.81196581196582%;
+	}
+
+	.one-fourth {
+		width: 23.076923076923077%;
+	}
+
+	.three-fourths {
+		width: 74.35897435897436%;
+	}
+
+	.one-sixth {
+		width: 14.52991452991453%;
+	}
+
+	.five-sixths {
+		width: 82.90598290598291%;
+	}
+
+	.first {
+		clear: both;
+		margin-left: 0;
+	}
+
+	.site-header .widget_search .search-form {
+		max-width: 240px;
+	}
+
+	/* this ony affects icons in header left/right, not header before */
+	.site-header > .wrap .simple-social-icons {
+		margin: 0 10px !important;
+	}
+
+	h1,
+	h1.entry-title,
+	.banner-title {
+		font-size: 2.441rem;
+	}
+
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+	max-width: 100%;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 16px;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: 12px;
+}
+
+.entry-image-link.alignleft,
+.entry-image-link.alignright,
+.entry-image-link .alignleft,
+.entry-image-link .alignright {
+	margin-top: 8px;
+}
+
+figcaption,
+.wp-caption-text,
+.gallery-caption {
+	font-size: 0.8rem;
+	color: rgba(0,0,0,0.6);
+	text-align: center;
+	margin: 0;
+}
+
+.entry-content p.wp-caption-text {
+	margin-bottom: 0;
+}
+
+.entry-content .wp-audio-shortcode,
+.entry-content .wp-playlist,
+.entry-content .wp-video {
+	margin: 0 0 24px;
+}
+
+.gallery {
+	margin-bottom: 32px;
+}
+
+.gallery-item .gallery-icon {
+	line-height: 0;
+}
+
+.gallery-caption {
+	margin: 8px 0 0;
+	line-height: initial;
+}
+
+.entry-content ul.blocks-gallery-grid {
+	margin: 0 0 24px;
+}
+.entry-content li.blocks-gallery-item,
+.entry-content li.blocks-gallery-item:first-of-type,
+.entry-content li.blocks-gallery-item:last-of-type {
+	margin-bottom: 16px;
+}
+
+input[name="post_password"] {
+	max-width: 240px;
+}
+
+/* ## Genesis
+--------------------------------------------- */
+
+.breadcrumb {
+	font-size: 0.8em;
+	margin: 12px auto;
+}
+
+.breadcrumb a {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+	color: rgba(0, 0, 0, 0.75);
+}
+
+.content .archive-description {
+	clear: both; /* mostly for Woo taxonomy results count and ordering */
+	margin-bottom: 36px;
+}
+
+.author-box {
+	text-align: center;
+	overflow: hidden; /* fix avatar out of container with short bio */
+}
+
+.author-box-content {
+	overflow: hidden;
+}
+
+.author-box a {
+	border-bottom: none;
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
+}
+
+.author-box .avatar {
+	display: inline-block;
+	max-width: 100px;
+	margin: 0 auto 16px;
+}
+
+
+
+/* # Media Queries (mobile-first)
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 545px) {
+
+        .alignleft,
+        a.alignleft,
+        img.alignleft,
+        .wp-caption.alignleft {
+            float: left;
+            text-align: left;
+            margin: 24px 24px 24px 0;
+        }
+    
+        .alignright,
+        a.alignright,
+        img.alignright,
+        .wp-caption.alignright {
+            float: right;
+            text-align: right;
+            margin: 24px 0 24px 24px;
+        }
+
+        .author-box {
+            text-align: left;
+        }
+    
+        .author-box .avatar {
+            float: left;
+            margin-right: 24px;
+        }
+    
+
+}
+
+@media only screen and (min-width: 769px) {}
+
+@media only screen and (min-width: 993px) {}
+
+@media only screen and (min-width: 1160px) {}
+
+/* # Media Queries (mobile-second)
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1159px) {}
+
+@media only screen and (max-width: 992px) {
+    .before-header .hide-before-header {
+        display:none;
+    }
+}
+
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 544px) {}
