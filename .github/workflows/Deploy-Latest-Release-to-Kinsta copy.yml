@@ -9,21 +9,27 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Download latest release archive
+      - name: Download and extract latest release
         run: |
-          curl -L "https://github.com/CapWebSolutions/wre-mai-achieve/archive/refs/tags/${{ github.event.release.tag_name }}.zip" -o wre-mai-achieve.zip
+          curl -L "https://github.com/CapWebSolutions/wre-mai-achieve/archive/refs/tags/${{ github.event.release.tag_name }}.tar.gz" -o release.tar.gz
+          mkdir wre-mai-achieve
+          tar -xzf release.tar.gz -C wre-mai-achieve --strip-components=1
 
-      - name: Upload files to Kinsta via SFTP
+      - name: Repackage theme folder
+        run: |
+          tar -czf mai-achieve.tar.gz -C wre-mai-achieve .
+
+      - name: Upload theme to Kinsta via SFTP
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.KINSTA_HOST }}
           username: ${{ secrets.KINSTA_USERNAME }}
           key: ${{ secrets.KINSTA_SSH_KEY }}
           port: ${{ secrets.KINSTA_PORT }}
-          source: wre-mai-achieve.zip
+          source: mai-achieve.tar.gz
           target: /www/wesselrealestate_425/public/wp-content/themes
 
-      - name: Unpack and set permissions on server
+      - name: Unpack theme on Kinsta
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.KINSTA_HOST }}
@@ -32,9 +38,6 @@ jobs:
           port: ${{ secrets.KINSTA_PORT }}
           script: |
             cd /www/wesselrealestate_425/public/wp-content/themes
-            unzip -o wre-mai-achieve.zip
-            # Copy contents from wre-mai-achieve-${{ github.event.release.tag_name }} to theme directory
-            cp -rf wre-mai-achieve-${{ github.event.release.tag_name }}/* mai-achieve/
-            #rm -rf wre-mai-achieve-${{ github.event.release.tag_name }}
-            #rm wre-mai-achieve.zip
-            #chown -R www-data:www-data /www/wesselrealestate_425/public/wp-content/themes
+            mkdir -p mai-achieve
+            tar -xzf mai-achieve.tar.gz -C mai-achieve
+            rm mai-achieve.tar.gz
