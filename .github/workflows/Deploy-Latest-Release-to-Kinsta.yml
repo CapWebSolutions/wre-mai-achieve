@@ -23,18 +23,18 @@ jobs:
           source: wre-mai-achieve.zip
           target: /www/wesselrealestate_425/public/wp-content/themes
 
-      - name: Unpack and set permissions on server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.KINSTA_HOST }}
-          username: ${{ secrets.KINSTA_USERNAME }}
-          key: ${{ secrets.KINSTA_SSH_KEY }}
-          port: ${{ secrets.KINSTA_PORT }}
-          script: |
-            cd /www/wesselrealestate_425/public/wp-content/themes
-            unzip -o wre-mai-achieve.zip
-            # Copy contents from wre-mai-achieve-${{ github.event.release.tag_name }} to theme directory
-            cp -rf wre-mai-achieve-${{ github.event.release.tag_name }}/* mai-achieve/
-            #rm -rf wre-mai-achieve-${{ github.event.release.tag_name }}
-            #rm wre-mai-achieve.zip
-            #chown -R www-data:www-data /www/wesselrealestate_425/public/wp-content/themes
+      # - name: Unpack and set permissions on server
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.KINSTA_HOST }}
+      #     username: ${{ secrets.KINSTA_USERNAME }}
+      #     key: ${{ secrets.KINSTA_SSH_KEY }}
+      #     port: ${{ secrets.KINSTA_PORT }}
+      #     script: |
+      #       cd /www/wesselrealestate_425/public/wp-content/themes
+      #       unzip -o wre-mai-achieve.zip
+      #       # Copy contents from wre-mai-achieve-${{ github.event.release.tag_name }} to theme directory
+      #       cp -rf wre-mai-achieve-${{ github.event.release.tag_name }}/* mai-achieve/
+      #       #rm -rf wre-mai-achieve-${{ github.event.release.tag_name }}
+      #       #rm wre-mai-achieve.zip
+      #       #chown -R www-data:www-data /www/wesselrealestate_425/public/wp-content/themes
