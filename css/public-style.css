@@ -135,6 +135,9 @@ img.block{display:block;}
 .image-content .inner .right .content-wrap .blue-text h4{font-weight:600;margin:0 0;padding:0 0 30px;}
 .image-content .inner .right .content-wrap .content{font-size:24px;line-height:40px;}
 .image-content .inner .right .content-wrap .content p{margin:0 0;}
+.image-content .inner .right .content-wrap .content-additional p{margin:20px 0;}
+.image-content .inner .right .content-wrap .content-additional-center p a {transition:400ms; text-decoration:none; color:#fff;}
+
 
 .semibold-content{font-weight:600;}
 
