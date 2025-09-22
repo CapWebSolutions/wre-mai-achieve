@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.4] 2025-09-22
+
+### Changed
+
+- Under new ACF Pro license, modified flexible sections field group to permit additional text content to be added under primary image in flexible-sections/greenville_image_content_module
+- CSS changes for this were inadvertiently included in the changes associated with v2.1.3 as that version and this one were documented at the same time in a catch-up repo update. 
+
+### Added
+
+- Exported ACF field group(s) to json and added these to new acf-field-groups folder in theme. 
+
 ## [2.1.3] 2024-08-15
 
 ### Changed

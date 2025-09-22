@@ -6,6 +6,7 @@ if ( class_exists( 'acf' ) ) {
     $title             = get_sub_field( 'title' );
     $description_title = get_sub_field( 'description_title' );
     $description       = get_sub_field( 'description' );
+    $below_image_content = get_sub_field( 'below_image_content' );
 }
 if ( ! empty( $image ) || ! empty( $title ) || ! empty( $description ) || ! empty( $description_title ) ) {
     ?>
@@ -19,12 +20,20 @@ if ( ! empty( $image ) || ! empty( $title ) || ! empty( $description ) || ! empt
             <div class="inner flex">
                 <?php if ( ! empty( $image ) ) { ?>
                     <div class="right">
-                        <div class="image">
-                            <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
-                            <!-- <div class="over-text">Don wessel - Exclusive Buyer's Agent</div> -->
+                        <div class="content-wrap">
+                            <div class="image">
+                                <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+                                <!-- <div class="over-text">Don wessel - Exclusive Buyer's Agent</div> -->
+                            </div>
+                            <?php if ( ! empty( $below_image_content ) ) { ?>
+                                <div class="content-additional">
+                                    <?php echo $below_image_content; ?>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                 <?php } ?>
+
                 <?php if ( ! empty( $description_title ) || ! empty( $description ) ) { ?>
                     <div class="right">
                         <div class="content-wrap">

@@ -5,9 +5,9 @@ if ( ! empty( 'wessel_flexible_sections' ) ) {
         if ( get_row_layout() == 'green_banner_module' ) {
             get_template_part( 'flexible-sections/green_banner_module' );
         } elseif ( get_row_layout() == 'greenville_image_content_module' ) {
-            // get_template_part( 'flexible-sections/greenville_image_content_module' );
+            get_template_part( 'flexible-sections/greenville_image_content_module' );
             // get_template_part( 'flexible-sections/greenville_image_content_module_multi_image' );
-            get_template_part( 'flexible-sections/greenville_image_content_module_additional_content' );
+            // get_template_part( 'flexible-sections/greenville_image_content_module_additional_content' );
         } elseif ( get_row_layout() == 'greenville_pledge_content_module' ) {
             get_template_part( 'flexible-sections/greenville_pledge_content_module' );
         } elseif ( get_row_layout() == 'greenville_videos_popup_module' ) {
